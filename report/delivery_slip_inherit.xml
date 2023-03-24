@@ -1,0 +1,9 @@
+<odoo>
+    <template id="delivery_slip" inherit_id="stock.report_delivery_document">
+        <xpath expr="//div[hasclass('page')]" position="before">
+            <t t-if="o.move_ids[0].picking_id.sale_id.delivery">
+               <h1> <strong style="color:red;"><span>DO NOT DELIVER</span></strong></h1>
+            </t>
+        </xpath>
+    </template>
+</odoo>
